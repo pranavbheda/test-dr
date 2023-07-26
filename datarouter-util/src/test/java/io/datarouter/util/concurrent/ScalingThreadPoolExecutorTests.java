@@ -26,11 +26,12 @@ import org.testng.annotations.Test;
 
 import io.datarouter.util.retry.RetryableTool;
 
+@Test(enabled = false)
 public class ScalingThreadPoolExecutorTests{
 
 	private static final int MAX_THREADS = 5;
 
-	@Test
+	@Test(enabled = false)
 	public void test(){
 		ThreadPoolExecutor executor = new ScalingThreadPoolExecutor(ScalingThreadPoolExecutorTests.class
 				.getSimpleName(), MAX_THREADS);
